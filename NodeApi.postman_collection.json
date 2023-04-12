@@ -1,0 +1,1021 @@
+{
+	"info": {
+		"_postman_id": "15ac77b5-f973-4d1a-8514-ad2b373e14fc",
+		"name": "NodeApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "https://127.0.0.1:8080/api/user/login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "govindbiswas444@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "PremBiswas@123#",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/login",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/users",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "PremBiswas@123#",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "govindbiswas444@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/users?currentPage=1&pageSize=10",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"users"
+							],
+							"query": [
+								{
+									"key": "currentPage",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/users/64195209fbb5b64002ebdd84",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "PremBiswas@1234#",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "govindbiswas444@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/users/641a9e25aa8bf90c31b6a337",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"users",
+								"641a9e25aa8bf90c31b6a337"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/verify",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"govindbiswas44@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/verify",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/registaer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Gvonda\",\r\n    \"lastName\": \"Biswas\",\r\n    \"email\": \"govindbiswas444@gmail.com\",\r\n    \"mobile\": \"9511723507\",\r\n    \"password\": \"PremBiswas@123#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/registaer",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"registaer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/users/64195209fbb5b64002ebdd84",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "PremBiswas@1234#",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "govindbiswas444@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\": \"641a9e25aa8bf90c31b6a337\",\r\n    \"email\": \"govindbiswas444@gmail.com\",\r\n    \"firstName\": \"Prem\",\r\n    \"lastName\": \"Biswas\",\r\n    \"name\": \"Prem Biswas\",\r\n    \"mobile\": 9511723507,\r\n    \"createdAt\": \"2023-03-21T06:42:32.169Z\",\r\n    \"updatedAt\": \"2023-03-21T06:42:32.169Z\",\r\n    \"isMobileVerifyed\": false,\r\n    \"isEmailVerifyed\": false,\r\n    \"__v\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/users/641a9e25aa8bf90c31b6a337",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"users",
+								"641a9e25aa8bf90c31b6a337"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/users/64195209fbb5b64002ebdd84",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "PremBiswas@123#",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "govindbiswas444@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/users/641d6ac12c71f44e6a82efa0",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"users",
+								"641d6ac12c71f44e6a82efa0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/users/password/6419678236d58072473664d1",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "PremBiswas@123#",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "govindbiswas444@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"previousPassword\":\"PremBiswas@123#\",\r\n    \"newPassword\":\"PremBiswas@1234#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/users/password/641a9e25aa8bf90c31b6a337",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"users",
+								"password",
+								"641a9e25aa8bf90c31b6a337"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/users/password/forgot/6419678236d58072473664d1",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"govindbiswas444@gmail.com\",\r\n    \"newPassword\": \"PremBiswas@123#\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/users/password/forgot/6419678236d58072473664d1",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"users",
+								"password",
+								"forgot",
+								"6419678236d58072473664d1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/forgot/password/verify?email=govindbiswas444@gmail.com&code=9991",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"govindbiswas444@gmail.com\",\r\n    \"code\": \"8699\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/forgot/password/verify",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"forgot",
+								"password",
+								"verify"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/forgot/password?email=govindbiswas444@gmail.com",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/forgot/password/verify?email=govindbiswas444@gmail.com",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"forgot",
+								"password",
+								"verify"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "govindbiswas444@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://localhost:8080/api/user/login/static?currentPage=1&pageSize=10",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "PremBiswas@1234#",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "govindbiswas444@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/login/static?currentPage=1&pageSize=20",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"login",
+								"static"
+							],
+							"query": [
+								{
+									"key": "currentPage",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "20"
+								},
+								{
+									"key": "name",
+									"value": "Govind Biswas",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "govindbiswas",
+									"disabled": true
+								},
+								{
+									"key": "from",
+									"value": "2023-03-23T00:00:00.204Z",
+									"disabled": true
+								},
+								{
+									"key": "to",
+									"value": "2023-03-23T11:59:50.204Z",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/login/static/report",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "PremBiswas@1234#",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "govindbiswas444@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/login/static/report",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"login",
+								"static",
+								"report"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User Profile",
+			"item": [
+				{
+					"name": "create profile",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "PremBiswas@123#",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "govindbiswas444@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imagepath",
+									"type": "file",
+									"src": "/C:/Users/saura/Documents/Received Files/offer 3.webp"
+								},
+								{
+									"key": "userId",
+									"value": "641e7992260005e26bd7e34d",
+									"type": "text"
+								},
+								{
+									"key": "residence_address",
+									"value": "chandrapur, MH, IN",
+									"type": "text"
+								},
+								{
+									"key": "street_address",
+									"value": "chandrapur, MH, IN",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "India",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Maharshtra",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "chandrapur",
+									"type": "text"
+								},
+								{
+									"key": "pincode",
+									"value": "442401",
+									"type": "text"
+								},
+								{
+									"key": "countrycode",
+									"value": "IN",
+									"type": "text"
+								},
+								{
+									"key": "statecode",
+									"value": "MH",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/profile",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "PremBiswas@123#",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "govindbiswas444@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/profile",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/profile/641a9e25aa8bf90c31b6a337",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "PremBiswas@1234#",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "govindbiswas444@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/profile/641a9e25aa8bf90c31b6a337",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"641a9e25aa8bf90c31b6a337"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/profile/641da372ba9d008a53194f9e",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "govindbiswas444@gmail.com",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "PremBiswas@1234#",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/profile/641da827b5c633e82da0713d",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"641da827b5c633e82da0713d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update profile image",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "PremBiswas@123#",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "govindbiswas444@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "imagepath",
+									"type": "file",
+									"src": "/C:/Users/saura/Documents/Received Files/66628597bda51c367413a7ad90e4d451.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/profile/image/641e79fdc24f49b8a2469722?userId=641e7992260005e26bd7e34d",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"image",
+								"641e79fdc24f49b8a2469722"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "641e7992260005e26bd7e34d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/profile/address/641e79fdc24f49b8a2469722?userId=641e7992260005e26bd7e34d",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "PremBiswas@123#",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "govindbiswas444@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "residence_address",
+									"value": "Raipur, CG, In",
+									"type": "text"
+								},
+								{
+									"key": "street_address",
+									"value": "Raipur, CG, In",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "India",
+									"type": "text"
+								},
+								{
+									"key": "state",
+									"value": "Chhattisgrah",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Raipur",
+									"type": "text"
+								},
+								{
+									"key": "pincode",
+									"value": "654321",
+									"type": "text"
+								},
+								{
+									"key": "countrycode",
+									"value": "IN",
+									"type": "text"
+								},
+								{
+									"key": "statecode",
+									"value": "CG",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/profile/address/641e79fdc24f49b8a2469722?userId=641e7992260005e26bd7e34d",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"profile",
+								"address",
+								"641e79fdc24f49b8a2469722"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "641e7992260005e26bd7e34d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://127.0.0.1:8080/api/user/login/static/report",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "PremBiswas@123#",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "govindbiswas444@gmail.com",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "userreport",
+									"type": "file",
+									"src": "/C:/Users/saura/Downloads/Logs_Report (1).xlsx"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://127.0.0.1:8080/api/user/login/static/report",
+							"protocol": "https",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"user",
+								"login",
+								"static",
+								"report"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "PremBiswas@123#",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "govindbiswas444@gmail.com",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
